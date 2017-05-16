@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "No Fancy Theme"
+title = "Alex Muro"
 theme = "nofancy"
 
 #if not set copyright, default copyright template will be applied

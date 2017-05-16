@@ -8,6 +8,18 @@ import BrowserSync from "browser-sync";
 import webpack from "webpack";
 import webpackConfig from "./webpack.conf";
 
+(function() {
+    var childProcess = require("child_process");
+    var oldSpawn = childProcess.spawn;
+    function mySpawn() {
+        console.log('spawn called');
+        console.log(arguments);
+        var result = oldSpawn.apply(this, arguments);
+        return result;
+    }
+    childProcess.spawn = mySpawn;
+})();
+
 const browserSync = BrowserSync.create();
 const hugoBin = "hugo";
 const defaultArgs = ["-d", "../dist", "-s", "site", "-v"];

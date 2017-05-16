@@ -17,7 +17,7 @@ Be sure that you have the latest node, npm and [Hugo](https://gohugo.io/overview
 Clone this repository and run:
 
 ```bash
-npm install
+npm xinstall
 npm start
 ```
 
